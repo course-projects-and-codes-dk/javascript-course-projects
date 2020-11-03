@@ -1,0 +1,243 @@
+/* html{
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+} */
+
+
+/*
+===============
+Variables
+===============
+*/
+
+:root {
+  /* main colors */
+  --clr-red: #e13742;
+  --clr-orange: #ec763d;
+  --clr-yellow: rgb(247, 181, 56);
+  --clr-green: #6e9075;
+  /* dark shades of primary color*/
+  --clr-primary-1: hsl(184, 91%, 17%);
+  --clr-primary-2: hsl(185, 84%, 25%);
+  --clr-primary-3: hsl(185, 81%, 29%);
+  --clr-primary-4: hsl(184, 77%, 34%);
+  /* primary/main color */
+  --clr-primary-5: rgb(44, 174, 186);
+  /* lighter shades of primary color */
+  --clr-primary-6: hsl(185, 57%, 50%);
+  --clr-primary-7: hsl(184, 65%, 59%);
+  --clr-primary-8: hsl(184, 80%, 74%);
+  --clr-primary-9: hsl(185, 94%, 87%);
+  --clr-primary-10: hsl(186, 100%, 94%);
+  /* darkest grey - used for headings */
+  --clr-grey-1: hsl(209, 61%, 16%);
+  --clr-grey-2: hsl(211, 39%, 23%);
+  --clr-grey-3: hsl(209, 34%, 30%);
+  --clr-grey-4: hsl(209, 28%, 39%);
+  /* grey used for paragraphs */
+  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-6: hsl(209, 23%, 60%);
+  --clr-grey-7: hsl(211, 27%, 70%);
+  --clr-grey-8: hsl(210, 31%, 80%);
+  --clr-grey-9: hsl(212, 33%, 89%);
+  --clr-grey-10: hsl(207, 36%, 95%);
+  /* other colors */
+  --clr-white: #fbfffe;
+  --clr-black: #050505;
+  --clr-platinum: #E5E5E5;
+  /* font families */
+  --ff-primary: 'Roboto', sans-serif;
+  --ff-secondary: 'Caveat', cursive;
+  --ff-tertiary: 'Libre Baskerville', serif;
+  /* transitions */
+  --transition: all 0.3s linear;
+  --long-transition: all 1.5s ease;
+  /* spacing */
+  --spacing: 0.25rem;
+  /* radius */
+  --radius: 0.65rem;
+  /* box shadow */
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 2);
+}
+
+
+/*
+===============
+Global Styles
+===============
+*/
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: var(--clr-grey-10);
+  line-height: 1.5;
+  font-size: 0.9rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1rem;
+}
+
+h4 {
+  font-size: 0.9rem;
+}
+
+
+
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.4rem;
+  }
+  h4 {
+    font-size: 1.1rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+
+
+.main-body{
+  min-height: calc(100vh - 53px);
+}
+@media screen and (min-width: 992px) {
+  .main-body {
+    min-height: calc(100vh - 55px);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .main-body {
+    min-height: calc(100vh - 57px);
+  }
+}
+
+
+/* NAVBAR */
+.nav{
+  padding: 1.2rem 0 0.4rem;
+}
+
+.nav h2{
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top:0;
+  font-family: var(--ff-tertiary);
+}
+
+@media screen and (min-width: 564px) {
+  .input-fields{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+  }
+}
+
+.collection{
+  max-width: 564px;
+  margin-left: auto;
+  margin-right: auto;
+  letter-spacing: 2px;
+}
+
+li strong{
+  font-weight: bold;
+  text-transform: capitalize;
+}
+li i{
+  font-size: 1.5rem;
+  transition: var(--transition);
+}
+li i:hover{
+  color: var(--clr-black);
+}
+.collection li:nth-child(even) {
+  background: var(--clr-platinum)
+}
+
+/* MODAL */
+.modal-overlay {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  z-index: -10;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.open-modal {
+  visibility: visible;
+  z-index: 10;
+}
+
+.modal-m{
+  background: var(--clr-platinum);
+  border-radius: var(--radius);
+  width: 90%;
+  max-width: 564px;
+  padding: 2rem 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+}
+.modal-m h2{
+  margin-bottom: 2rem;
+}
+
+.btn{
+  margin-bottom: 1rem;
+}
+
+.footer{
+  padding: 1rem 0;
+  color: var(--clr-white);
+  letter-spacing: var(--spacing);
+  font-weight: bold;
+  font-size: 1.2rem;
+}

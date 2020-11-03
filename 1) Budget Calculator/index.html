@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Budget Fantasy</title>
+  <!-- css -->
+  <link rel="stylesheet" href="./styles.css">
+  <!-- favicon -->
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="./fontawesome-icons/css/all.min.css">
+</head>
+
+
+<body>
+  
+  <!-- HEADER -->
+  <header class="hero">
+  
+    <div class="hero-banner">
+  
+      <h4 class="hero-title">
+        Available Budget in <span class="hero-title-month">%Month%</span>:
+      </h4>
+
+      <h1 class="hero-budget">+ 2,345.64</h1>
+
+      <!-- total income -->
+      <div class="total-income">
+        <h4 class="total-income-text">income</h4>
+        <div class="total-num">
+          <h4 class="total-income-number">+5,095.00</h4>
+          <h4 class="total-income-percent">&nbsp;&nbsp;</h4>
+        </div>
+      </div>
+
+      <!-- total expense -->
+      <div class="total-expense">
+        <h4 class="total-expense-text">expense</h4>
+        <div class="total-num">
+          <h4 class="total-expense-number">-1200.05</h4>
+          <h4 class="total-expense-percent">70%</h4>
+        </div>
+      </div>
+
+    </div>
+  
+  </header>
+  <!-- END OF HEADER -->
+
+
+
+
+<!-- INPUT SECTION -->
+<section class="input">
+
+  <!-- container with input fields -->
+  <div class="input-container">
+
+    <select class="input-type">
+      <option value="inc" selected>+</option>
+      <option value="exp">-</option>
+    </select>
+    <input type="text" class="input-description" placeholder="Add description">
+    <input type="number" class="input-value" placeholder="Value">
+    <button class="input-btn"><i class="far fa-check-circle"></i></button>
+
+  </div>
+
+
+  <!-- container with single income and expense -->
+  <div class="input-center section-center">
+
+    <!-- income section -->
+    <div class="income">
+      <h3 class="income-title">incomes</h3>
+      <div class="income-list">
+
+        <!-- <div class="item" id="inc-0">
+          <p class="item-description">Salary</p>
+          <div class="item-num">
+            <p class="item-value">+ 1500.00</p>
+            <div class="item-delete">
+              <button class="item-delete-btn"><i class="far fa-times-circle"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="item" id="inc-1">
+          <p class="item-description">Sold Bike</p>
+          <div class="item-num">
+            <p class="item-value">+ 800</p>
+            <div class="item-delete">
+              <button class="item-delete-btn"><i class="fas fa-times-circle"></i></button>
+            </div>
+          </div>
+        </div> -->
+
+      </div>
+    </div>
+
+
+    <!-- expense section -->
+    <div class="expense">
+
+
+      <h3 class="expense-title">expenses</h3>
+      <div class="expense-list">
+
+        <!-- <div class="item" id="exp-0">
+          <p class="item-description">Rent</p>
+          <div class="item-num">
+            <p class="item-value">- 500.00</p>
+            <p class="item-percent">39%</p>
+            <div class="item-delete">
+              <button class="item-delete-btn"><i class="fas fa-times-circle"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="item" id="exp-1">
+          <p class="item-description">Shopping</p>
+          <div class="item-num">
+            <p class="item-value">- 329.74</p>
+            <p class="item-percent">11%</p>
+            <div class="item-delete">
+              <button class="item-delete-btn"><i class="fas fa-times-circle"></i></button>
+            </div>
+          </div>
+        </div> -->
+
+      </div>  
+
+
+    </div>
+
+  </div>
+
+</section>
+<!-- END OF INPUT SECTION -->
+
+
+
+
+<!-- Javascript -->
+<script src="./script.js"></script>
+
+</body>
+</html>

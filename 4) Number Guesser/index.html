@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guess The Number!</title>
+  <!-- css -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <!-- google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Roboto&display=swap" rel="stylesheet">
+  <!-- favicon -->
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+  <!-- CARD -->
+  <section class="card" id="card">
+
+
+  <!-- main title -->
+  <h1 class="main-title">Guess The Number!</h1>
+
+  <!-- game info -->
+  <p class="game-info">A random number has been generated between <span id="min-num"></span> and <span id="max-num"></span>.<br> Can you guess the number?</p>
+
+  <!-- inputs -->
+  <form class="input-fields">
+    <!-- input the number -->
+    <input type="number" class="input" id="input" placeholder="Enter your guess...">
+
+    <!-- submit btn -->
+    <input type="submit" class="submit" id="submit" value="Check">
+  </form>
+
+  <!-- error msg -->
+  <h4 class="message"></h4>
+
+
+  </section>
+  <!-- END OF CARD -->
+
+  <!-- JavaScript -->
+  <script src="./app.js"></script>
+
+</body>
+
+</html>
+
+

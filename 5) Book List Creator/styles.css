@@ -1,0 +1,245 @@
+/* 
+===================
+CSS VARIABLES
+===================
+*/
+:root {
+  /* colors */
+  --clr-dark: #0c090d;
+  --clr-grey: #343A40;
+  --clr-grey-btn: #23272B;
+  --clr-blue: #28B9B5;
+  --clr-white:#fff;
+  /* font families */
+  --ff-primary: 'Roboto', sans-serif;
+  --ff-secondary: 'Libre Baskerville', serif;
+  /* transitions */
+  --transition: all 0.3s linear;
+  --long-transition: all 1.5s ease;
+  /* spacing */
+  --spacing: 0.2rem;
+  /* radius */
+  --radius: 0.45rem;
+  /* box shadow */
+  --light-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  --dark-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+  /* width */
+  --max-width: 764px;
+}
+
+
+/*
+===============
+Global Styles
+===============
+*/
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff-primary);
+  color: var(--clr-dark);
+  line-height: 1.5;
+  font-size: 0.9rem;
+  background-color: rgba(237, 234, 231, 0.4);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: var(--ff-secondary);
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1rem;
+}
+
+h4 {
+  font-size: 0.9rem;
+}
+
+
+
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  h3 {
+    font-size: 1.4rem;
+  }
+  
+  h4 {
+    font-size: 1.1rem;
+  }
+  
+  p {
+    font-size: 1rem;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+
+
+/* main card */
+.card{
+  min-height: 100vh;
+  padding: 3rem 2rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+/* title */
+.title{
+  margin-bottom: 2rem;
+}
+
+/* form items */
+.book-form{
+  max-width: var(--max-width);
+  margin: 4rem auto;
+}
+label{
+  font-weight: bold;
+  letter-spacing: var(--spacing);
+}
+.form-control{
+  display: block;
+  margin: 0.5rem auto 1.5rem;
+  width: 100%;
+  padding: 0.5rem 0.8rem;
+  border: 1.49px solid var(--clr-grey);
+  outline: none;
+  text-transform: capitalize;
+  border-radius: var(--radius);
+}
+.form-control:focus{
+  border-color: var(--clr-blue);
+}
+.form-btn{
+  display: block;
+  margin: 2rem auto;
+  letter-spacing: var(--spacing);
+  text-transform: uppercase;
+  padding: 0.7rem 1rem;
+  border-radius: var(--radius);
+  background: var(--clr-blue);
+  color: var(--clr-white);
+  font-weight: bold;
+  border: 1.5px solid var(--clr-grey-btn);
+  cursor: pointer;
+  transition: var(--transition);
+  outline: none;
+  box-shadow: var(--light-shadow);
+}
+.form-btn:hover{
+  opacity: 0.8;
+  box-shadow: var(--dark-shadow);
+}
+
+
+/* sub-title */
+.subtitle{
+  margin-top: 2rem;
+  text-align: center;
+}
+
+
+/* table items */
+.book-table{
+  width: 100%;
+  border-collapse: collapse;
+  counter-reset: Serial;
+}
+
+.book-table tr td:first-child:before {
+  counter-increment: Serial;
+  content: counter(Serial);
+}
+
+.thead{
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: var(--spacing);
+}
+
+th{
+  padding: 0.5rem;
+}
+
+.tbody tr:nth-child(odd){
+  background: #ccc;
+}
+
+.tbody tr:last-child {
+  border-bottom: 1px solid #ccc;
+}
+
+td{
+  margin: 1rem;
+  padding: 0.8rem;
+  text-transform: capitalize;
+}
+
+
+
+
+/* delete btn */
+.fas{
+  color: rgb(240, 69, 69);
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.fas:hover{
+  opacity: 0.7;
+}
+
+
+
+
+/* alert messages */
+.error, .success, .delete {
+  color: var(--clr-white);
+  font-size: 1.1rem;
+  margin: 1.5rem auto;
+  text-align: center;
+  padding: 0.8rem 0;
+}
+.error{
+  background: rgb(243, 49, 49);
+}
+.success{
+  background: rgb(72, 187, 72);
+}
+.delete{
+  background: rgb(71, 146, 245);
+}

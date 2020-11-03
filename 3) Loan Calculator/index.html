@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loan Calculator</title>
+  <!-- css -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <!-- google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Roboto&display=swap" rel="stylesheet">
+  <!-- favicon -->
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+  <!-- CARD -->
+  <section class="card">
+
+
+      <!-- INPUT -->
+
+      <!-- main title -->
+      <h1 class="main-title">Loan Calculator</h1>
+
+      <!-- form input -->
+      <form class="input" id="form">
+
+        <div class="form-group">
+          <p><i class="fas fa-rupee-sign"></i></p>
+          <input type="number" class="input-item" id="amount" placeholder="Loan Amount">
+        </div>
+
+        <div class="form-group">
+          <p><i class="fas fa-percent"></i></p>
+          <input type="number" class="input-item" id="interest" placeholder="Interest Rate">
+        </div>
+
+        <div class="form-group">
+          <p><i class="far fa-calendar"></i></p>
+          <input type="number" class="input-item" id="years" placeholder="Years To Repay">
+        </div>
+
+        <input type="submit" class="submit" id="submit" value="Calculate">
+
+      </form>
+
+      <!-- END OF INPUT -->
+
+
+
+      <!-- LOADER IMAGE -->
+      <div class="loader">
+        <img src="./loading.gif" alt="loading">
+      </div>
+      <!-- END OF LOADER IMAGE -->
+
+
+
+      <!-- RESULT -->
+
+      <!-- output fields -->
+      <div class="output">
+
+      <!-- title -->
+      <h2 class="result-title">Results</h2>
+
+        <div class="form-group">
+          <p>Monthly Payment</p>
+          <input type="text" class="input-item" id="monthly-payment" disabled>
+        </div>
+  
+        <div class="form-group">
+          <p>Total Payment</p>
+          <input type="text" class="input-item" id="total-payment" disabled>
+        </div>
+  
+        <div class="form-group">
+          <p>Total Interest</p>
+          <input type="text" class="input-item" id="total-interest" disabled>
+        </div>
+
+      </div>
+
+      <!-- END OF RESULT -->
+
+
+  </section>
+  <!-- END OF CARD -->
+
+  <!-- JavaScript -->
+  <script src="./script.js"></script>
+
+</body>
+
+</html>

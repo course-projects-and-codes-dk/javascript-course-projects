@@ -1,0 +1,249 @@
+/* 
+===================
+CSS VARIABLES
+===================
+*/
+:root {
+  /* colors */
+  --clr-dark: rgb(12, 9, 13);
+  --clr-light: #ffffff;
+  --clr-grey: rgb(233, 230, 230);
+  --clr-border-grey: #dddada;
+  --clr-blue: #28B9B5;
+  --clr-red: #ca342fee;
+  /* transitions */
+  --transition: all 0.3s linear;
+  --long-transition: all 1.5s ease;
+  /* spacing */
+  --spacing: 0.2rem;
+  /* radius */
+  --radius: 0.45rem;
+  /* box shadow */
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  /* width */
+  --max-width: 992px;
+}
+
+
+/*
+===============
+Global Styles
+===============
+*/
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--clr-dark);
+  background-color: rgba(237, 234, 231,0.4);
+  line-height: 1.5;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+
+h1 {
+  font-size: 2.4rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1rem;
+}
+
+h4 {
+  font-size: 0.9rem;
+}
+
+p {
+  margin-bottom: 1.25rem;
+}
+
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  h4 {
+    font-size: 1.1rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+
+
+
+/* 
+=====================
+CARD
+=====================
+*/
+.card{
+  display: grid;
+  place-items: center;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.container{
+  padding: 3rem 1rem;
+  width: 90%;
+  margin: 0 auto
+}
+
+.main-title{
+  text-align: center;
+  margin-bottom: 5rem;
+  font-family: 'Libre Baskerville', serif;
+}
+@media screen and (max-width:481px) {
+  .main-title{
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+    font-size: 2rem;
+  }
+  .task-list-item{
+    padding: 0.5rem 1rem!important;
+  }
+}
+
+
+.form{
+  margin: 2rem 0;
+}
+.form-control-text{
+  border: none;
+  outline: none;
+  border-bottom: 2px solid var(--clr-grey);
+  transition: var(--transition);
+  text-transform: capitalize;
+  padding: 0.6rem 1rem;
+  background: transparent;
+  display: block;
+  margin: 1.5rem 0;
+  width: 100%;
+}
+.form-control-text::placeholder{
+  text-transform: capitalize;
+}
+.form-control-text:focus{
+  border-color:var(--clr-blue) ;
+}
+.form-control-text:focus::placeholder{
+  color: var(--clr-dark);
+}
+.form-control-btn,
+.clear-tasks-btn {
+  outline: none;
+  padding: 0.5rem 1.4rem;
+  color: var(--clr-light);
+  background: var(--clr-blue);
+  border-color: var(--clr-blue);
+  text-transform: uppercase;
+  letter-spacing: var(--spacing);
+  cursor: pointer;
+  transition: var(--transition);
+  font-weight: 700;
+  box-shadow: var(--light-shadow);
+  font-family: 'Roboto', sans-serif;
+
+}
+.form-control-btn:hover,
+.clear-tasks-btn:hover {
+  box-shadow: var(--dark-shadow);
+}
+
+.clear-tasks-btn{
+  margin-top: 2rem;
+  background: var(--clr-red);
+  border-color: var(--clr-red);
+  color: var(--clr-light);
+}
+.task-title{
+  margin: 4rem 0 2rem;
+  font-family: 'Libre Baskerville',
+  serif;
+}
+
+#search{
+  width: 100%;
+  margin-bottom: 0;
+}
+
+ul{
+  list-style: none;
+  margin-top: 3rem;
+}
+
+.task-list-item{
+  border-bottom: 1.5px solid rgba(12, 9, 13, 0.4);
+  padding: 0.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-size: 1rem;
+  font-size: bold;
+}
+.task-list-item:first-child{
+  border-top: 1.5px solid rgb(12, 9, 13, 0.4);
+}
+
+.task-list-item:nth-child(odd) {
+  background: transparent;
+}
+.task-list-item:nth-child(even) {
+  background: var(--clr-grey);
+}
+
+.task-delete-btn{
+  outline: none;
+  padding: 0.2rem 0.3rem;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--clr-red);
+  border-color: var(--clr-red);
+  cursor: pointer;
+  transition: var(--transition);
+}
+.task-delete-btn:hover{
+  transform: translateY(-0.2rem);
+}

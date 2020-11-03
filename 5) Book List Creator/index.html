@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add My Books</title>
+  <!-- css -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <!-- google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Roboto&display=swap" rel="stylesheet">
+  <!-- favicon -->
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+  <!-- CARD SECTION -->
+  <section class="card" id="card">
+
+
+    <!-- title -->
+    <h1 class="title">add my books!</h1>
+    <!-- end of title -->
+
+
+    <!-- || FORM || -->
+    <form class="book-form" id="book-form">
+
+      <!-- form item -->
+      <article class="form-item">
+        <label for="title">Title</label>
+        <input type="text" class="form-control" id="title" placeholder="Enter the title of the book">
+      </article>
+      <!-- end of form item -->
+      <!-- form item -->
+      <article class="form-item">
+        <label for="author">Author</label>
+        <input type="text" class="form-control" id="author" placeholder="Enter the name of the author">
+      </article>
+      <!-- end of form item -->
+      <!-- form item -->
+      <article class="form-item">
+        <label for="title">ISBN#</label>
+        <input type="text" class="form-control" id="isbn" placeholder="Enter the ISBN">
+      </article>
+      <!-- end of form item -->
+      <!-- submit btn -->
+      <input type="submit" value="add book" class="form-btn" id="form-btn">
+
+    </form>
+    <!-- || END OF FORM || -->
+
+<hr>
+
+    <!-- subtitle -->
+    <h2 class="title subtitle">added books</h2>
+    <!-- end of subtitle -->
+
+
+
+    <!-- || TABLE || -->
+    <table class="book-table" id="book-table">
+
+      <!-- table head -->
+      <thead class="thead" id="thead">
+        <tr>
+          <th>s no.</th>
+          <th>title</th>
+          <th>author</th>
+          <th>ISBN#</th>
+          <th></th>
+        </tr>
+      </thead>
+      <!-- end of table head -->
+
+      <!-- table body -->
+      <tbody class="tbody" id="tbody">
+      </tbody>
+      <!-- end of table body -->
+
+    </table>
+    <!-- || END OF TABLE || -->
+
+
+  </section>
+  <!-- END OF CARD SECTION -->
+
+
+  <!-- JavaScript -->
+  <script src="./app.js"></script>
+
+</body>
+
+</html>

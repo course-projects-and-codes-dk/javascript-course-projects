@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Organiser</title>
+  <!-- css -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <!-- google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Roboto&display=swap" rel="stylesheet">
+  <!-- favicon -->
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+  <!-- CARD -->
+  <section class="card">
+
+
+    <!-- container -->
+    <div class="container" id="container">
+
+
+      <!-- main title -->
+      <h1 class="main-title">task organiser</h1>
+
+      <!-- task input fields -->
+      <form class="form">
+        <input type="text" class="form-control-text" id="input" name="task" placeholder="new task">
+        <button type="submit" class="form-control-btn">add task</button>
+      </form>
+
+      <!-- task list title -->
+      <h2 class="task-title">task list</h2>
+
+      <!-- search input fields -->
+      <input type="text" class="form-control-text" id="search" name="search" placeholder="find tasks">
+
+      <!-- task list -->
+      <ul class="task-list">
+        <!-- list items -->
+        <!-- <li class="task-list-item">
+          walk the dog <button class="task-delete-btn"><i class="fas fa-times"></i></button>
+        </li>
+        <li class="task-list-item">
+          buy food <button class="task-delete-btn"><i class="fas fa-times"></i></button>
+        </li>
+        <li class="task-list-item">
+          walk the dog <button class="task-delete-btn"><i class="fas fa-times"></i></button>
+        </li>
+        <li class="task-list-item">
+          buy food <button class="task-delete-btn"><i class="fas fa-times"></i></button>
+        </li> -->
+      </ul>
+
+      <!-- clear tasks btn -->
+      <button class="clear-tasks-btn">clear tasks</button>
+
+    </div>
+    <!-- end of container -->
+
+
+  </section>
+  <!-- END OF CARD -->
+
+  <!-- JavaScript -->
+  <script src="./script.js"></script>
+
+</body>
+</html>
