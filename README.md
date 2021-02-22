@@ -13,3 +13,4 @@ It consists of a bunch of redesigned vanilla javascript projects of other develo
 - https://githubfinder-dk.netlify.app/
 - https://calorietracker-dk.netlify.app/
 - https://forkify-dk.netlify.app/
+- https://scrollproject-dk.netlify.app/
