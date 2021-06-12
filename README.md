@@ -17,3 +17,4 @@ It consists a bunch of redesigned javascript projects from the courses I took wh
 - https://multipletabs-dk.netlify.app/
 - https://colorflipper-dk.netlify.app/
 - https://weatherapp-dk.netlify.app/
+- https://eventkeycodes-dk.netlify.app/
