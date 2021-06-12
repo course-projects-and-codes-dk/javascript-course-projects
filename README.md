@@ -1,6 +1,6 @@
-# VanillaJS Repeated Projects
+# Javascript Projects from Courses
 
-It consists of a bunch of redesigned vanilla javascript projects of other developers with my input in it.
+It consists a bunch of redesigned javascript projects from the courses I took while learning javascript.
 
 ### Here's the live preview of all these projects
 
@@ -14,3 +14,6 @@ It consists of a bunch of redesigned vanilla javascript projects of other develo
 - https://calorietracker-dk.netlify.app/
 - https://forkify-dk.netlify.app/
 - https://scrollproject-dk.netlify.app/
+- https://multipletabs-dk.netlify.app/
+- https://colorflipper-dk.netlify.app/
+- https://weatherapp-dk.netlify.app/
